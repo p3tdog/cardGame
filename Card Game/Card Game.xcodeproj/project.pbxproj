@@ -14,6 +14,10 @@
 		C743FF221A2746B500FD4CA9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C743FF211A2746B500FD4CA9 /* Images.xcassets */; };
 		C743FF251A2746B500FD4CA9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C743FF231A2746B500FD4CA9 /* LaunchScreen.xib */; };
 		C743FF311A2746B500FD4CA9 /* Card_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C743FF301A2746B500FD4CA9 /* Card_GameTests.m */; };
+		C743FF3C1A275EEB00FD4CA9 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = C743FF3B1A275EEB00FD4CA9 /* Card.m */; };
+		C7CC1FAD1A2C78240076E19F /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CC1FAC1A2C78240076E19F /* PlayingCardDeck.m */; };
+		C7F898941A27959900B57FD4 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F898931A27959900B57FD4 /* Deck.m */; };
+		C7F898971A28475600B57FD4 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F898961A28475600B57FD4 /* PlayingCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		C743FF2A1A2746B500FD4CA9 /* Card GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Card GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C743FF2F1A2746B500FD4CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C743FF301A2746B500FD4CA9 /* Card_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card_GameTests.m; sourceTree = "<group>"; };
+		C743FF3A1A275EEB00FD4CA9 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		C743FF3B1A275EEB00FD4CA9 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
+		C7CC1FAB1A2C78240076E19F /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardDeck.h; path = Model/PlayingCardDeck.h; sourceTree = "<group>"; };
+		C7CC1FAC1A2C78240076E19F /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardDeck.m; path = Model/PlayingCardDeck.m; sourceTree = "<group>"; };
+		C7F898921A27959900B57FD4 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
+		C7F898931A27959900B57FD4 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
+		C7F898951A28475600B57FD4 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCard.h; path = Model/PlayingCard.h; sourceTree = "<group>"; };
+		C7F898961A28475600B57FD4 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCard.m; path = Model/PlayingCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +93,12 @@
 		C743FF131A2746B500FD4CA9 /* Card Game */ = {
 			isa = PBXGroup;
 			children = (
-				C743FF181A2746B500FD4CA9 /* AppDelegate.h */,
-				C743FF191A2746B500FD4CA9 /* AppDelegate.m */,
 				C743FF1B1A2746B500FD4CA9 /* ViewController.h */,
 				C743FF1C1A2746B500FD4CA9 /* ViewController.m */,
 				C743FF1E1A2746B500FD4CA9 /* Main.storyboard */,
 				C743FF211A2746B500FD4CA9 /* Images.xcassets */,
-				C743FF231A2746B500FD4CA9 /* LaunchScreen.xib */,
 				C743FF141A2746B500FD4CA9 /* Supporting Files */,
+				C743FF3D1A275EF000FD4CA9 /* Model */,
 			);
 			path = "Card Game";
 			sourceTree = "<group>";
@@ -96,6 +106,9 @@
 		C743FF141A2746B500FD4CA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C743FF231A2746B500FD4CA9 /* LaunchScreen.xib */,
+				C743FF181A2746B500FD4CA9 /* AppDelegate.h */,
+				C743FF191A2746B500FD4CA9 /* AppDelegate.m */,
 				C743FF151A2746B500FD4CA9 /* Info.plist */,
 				C743FF161A2746B500FD4CA9 /* main.m */,
 			);
@@ -117,6 +130,21 @@
 				C743FF2F1A2746B500FD4CA9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C743FF3D1A275EF000FD4CA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C743FF3A1A275EEB00FD4CA9 /* Card.h */,
+				C743FF3B1A275EEB00FD4CA9 /* Card.m */,
+				C7F898921A27959900B57FD4 /* Deck.h */,
+				C7F898931A27959900B57FD4 /* Deck.m */,
+				C7F898951A28475600B57FD4 /* PlayingCard.h */,
+				C7F898961A28475600B57FD4 /* PlayingCard.m */,
+				C7CC1FAB1A2C78240076E19F /* PlayingCardDeck.h */,
+				C7CC1FAC1A2C78240076E19F /* PlayingCardDeck.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F898971A28475600B57FD4 /* PlayingCard.m in Sources */,
+				C7F898941A27959900B57FD4 /* Deck.m in Sources */,
 				C743FF1D1A2746B500FD4CA9 /* ViewController.m in Sources */,
 				C743FF1A1A2746B500FD4CA9 /* AppDelegate.m in Sources */,
+				C7CC1FAD1A2C78240076E19F /* PlayingCardDeck.m in Sources */,
 				C743FF171A2746B500FD4CA9 /* main.m in Sources */,
+				C743FF3C1A275EEB00FD4CA9 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Card Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Card Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +448,7 @@
 				C743FF361A2746B500FD4CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C743FF371A2746B500FD4CA9 /* Build configuration list for PBXNativeTarget "Card GameTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +457,7 @@
 				C743FF391A2746B500FD4CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
